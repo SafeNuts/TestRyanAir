@@ -45,6 +45,7 @@ namespace Ryanair.Reservation
             builder.RegisterModule(new InfrastructureLevelRegistrationModule());
 
             builder.RegisterType<ReservationValidator>().As<IReservationValidator>();
+            builder.RegisterType<FlightSearchRequestValidator>().As<IFlightSearchRequestValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

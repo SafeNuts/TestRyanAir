@@ -14,6 +14,9 @@ namespace Ryanair.Reservation.Mapping
 
             CreateMap<Passenger, GetReservationPassengerResponseModel>();
             CreateMap<Flight, GetReservationFlightResponseModel>();
+
+            CreateMap<string, CreateReservationResultModel>()
+                .ForMember(x => x.ReservationNumber, opt => opt.MapFrom(x => x));
         }
     }
 }

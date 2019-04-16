@@ -80,7 +80,9 @@ namespace Ryanair.Reservation.Controllers
                 }
 
                 var reservationKey = _reservationService.CreateReservation(reservation);
-                return new OkObjectResult(reservationKey);
+                var result = _mapper.Map<CreateReservationResultModel>(reservationKey);
+
+                return new OkObjectResult(result);
             }
             catch (KeyNotFoundException exception)
             {

@@ -312,10 +312,17 @@ namespace Ryanair.Reservation.Tests.UnitTests.Web.Controllers
                 }
             };
 
+            var expectedResult = new CreateReservationResultModel()
+            {
+                ReservationNumber = RESERVATION_KEY
+            };
+
             var reservationServiceMock = new Mock<IReservationService>();
             reservationServiceMock.Setup(x => x.CreateReservation(reservation)).Returns(RESERVATION_KEY);
 
             var mapperMock = new Mock<IMapper>();
+            mapperMock.Setup(x => x.Map<CreateReservationResultModel>(RESERVATION_KEY)).Returns(expectedResult);
+
             var loggerMock = new Mock<ILogger<ReservationController>>();
 
             var reservationValidatorMock = new Mock<IReservationValidator>();
@@ -333,7 +340,11 @@ namespace Ryanair.Reservation.Tests.UnitTests.Web.Controllers
 
             var mappedResult = result as OkObjectResult;
             Assert.NotNull(mappedResult);
-            Assert.Equal(RESERVATION_KEY, mappedResult.Value);
+
+            var mappedResultValue = mappedResult.Value as CreateReservationResultModel;
+            Assert.NotNull(mappedResultValue);
+
+            Assert.StrictEqual(expectedResult, mappedResultValue);
 
             reservationServiceMock.VerifyAll();
             reservationValidatorMock.VerifyAll();

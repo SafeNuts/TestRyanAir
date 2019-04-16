@@ -400,3 +400,19 @@
 2019-04-16 14:39:53.7454 Info Loading assembly: NLog.Web.AspNetCore
 2019-04-16 14:39:54.0236 Info Adding target FileTarget(Name=error-log)
 2019-04-16 14:39:54.1588 Info Found 21 configuration items
+2019-04-16 17:41:18.8839 Info Message Template Auto Format enabled
+2019-04-16 17:41:18.9584 Info Loading assembly: NLog.Web.AspNetCore
+2019-04-16 17:41:19.3291 Info Adding target FileTarget(Name=error-log)
+2019-04-16 17:41:19.6108 Info Found 21 configuration items
+2019-04-16 17:42:59.2323 Info Message Template Auto Format enabled
+2019-04-16 17:42:59.3171 Info Loading assembly: NLog.Web.AspNetCore
+2019-04-16 17:42:59.8019 Info Adding target FileTarget(Name=error-log)
+2019-04-16 17:43:00.1338 Info Found 21 configuration items
+2019-04-16 17:50:21.3858 Info Message Template Auto Format enabled
+2019-04-16 17:50:21.4932 Info Loading assembly: NLog.Web.AspNetCore
+2019-04-16 17:50:21.9952 Info Adding target FileTarget(Name=error-log)
+2019-04-16 17:50:22.1403 Info Found 21 configuration items
+2019-04-16 17:53:45.4945 Info Message Template Auto Format enabled
+2019-04-16 17:53:45.6149 Info Loading assembly: NLog.Web.AspNetCore
+2019-04-16 17:53:46.2536 Info Adding target FileTarget(Name=error-log)
+2019-04-16 17:53:46.4730 Info Found 21 configuration items

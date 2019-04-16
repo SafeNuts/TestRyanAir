@@ -15,13 +15,31 @@ namespace Ryanair.Reservation.Infrastructure.Data.Repositories
             _dataStorage = new Dictionary<string, ReservationEntity>();
         }
 
-        public bool CheckIfKeyExists(string key) => _dataStorage.ContainsKey(key);
-
-        public string Create(ReservationEntity item)
+        public bool CheckIfKeyExists(string key)
         {
-            _dataStorage.Add(item.Key, item);
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentNullException(nameof(key));
+            }
 
-            return item.Key;
+            return _dataStorage.ContainsKey(key);
+        }
+
+        public string Create(ReservationEntity reservationItem)
+        {
+            if (reservationItem == null)
+            {
+                throw new ArgumentNullException(nameof(reservationItem));
+            }
+
+            if (string.IsNullOrWhiteSpace(reservationItem.Key))
+            {
+                throw new ArgumentException("Reservation should has a key.");
+            }
+
+            _dataStorage.Add(reservationItem.Key, reservationItem);
+
+            return reservationItem.Key;
         }
 
         public ReservationEntity Get(string key)
@@ -31,7 +49,13 @@ namespace Ryanair.Reservation.Infrastructure.Data.Repositories
                 throw new ArgumentNullException(nameof(key));
             }
 
-            var reservation = _dataStorage.FirstOrDefault(x => x.Value.Key.ToUpper() == key.ToUpper());
+            var reservation = _dataStorage.FirstOrDefault(x => string.Equals(x.Value.Key, key, StringComparison.CurrentCultureIgnoreCase));
+
+            if (reservation.Value == null)
+            {
+                throw new KeyNotFoundException($"Reservation with key: {key} was not found.");
+            }
+
             return reservation.Value;
         }
 

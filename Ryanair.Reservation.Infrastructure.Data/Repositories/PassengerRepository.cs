@@ -1,4 +1,5 @@
-﻿using Ryanair.Reservation.Data.Entities;
+﻿using System;
+using Ryanair.Reservation.Data.Entities;
 using Ryanair.Reservation.Data.Interfaces;
 using System.Collections.Generic;
 
@@ -17,6 +18,11 @@ namespace Ryanair.Reservation.Infrastructure.Data.Repositories
 
         public string Create(PassengerEntity passengerEntity)
         {
+            if (passengerEntity == null)
+            {
+                throw new ArgumentNullException(nameof(passengerEntity));
+            }
+
             _dataStorage.Add(passengerEntity);
 
             return passengerEntity.Key;

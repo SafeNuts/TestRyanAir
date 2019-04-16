@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Ryanair.Reservation.Infrastructure.Business.Domain;
 using Ryanair.Reservation.Validators.Implementations;

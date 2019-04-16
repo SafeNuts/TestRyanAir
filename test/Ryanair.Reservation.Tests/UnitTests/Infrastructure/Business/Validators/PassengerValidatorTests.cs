@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Moq;
 using Ryanair.Reservation.Infrastructure.Business.Domain;
 using Ryanair.Reservation.Infrastructure.Business.Services;
 using Ryanair.Reservation.Infrastructure.Business.Validators.Implementations;
 using Xunit;
 
-namespace Ryanair.Reservation.Tests.UnitTests.InfrastructureBusiness.Validators
+namespace Ryanair.Reservation.Tests.UnitTests.Infrastructure.Business.Validators
 {
     public class PassengerValidatorTests
     {

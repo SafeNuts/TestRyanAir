@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ryanair.Reservation.Infrastructure.Business.Exceptions;
 using Ryanair.Reservation.Infrastructure.Business.Services;
-using Ryanair.Reservation.Infrastructure.Business.Validators;
 using Ryanair.Reservation.Models;
 using Ryanair.Reservation.Validators;
 
@@ -32,27 +31,27 @@ namespace Ryanair.Reservation.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{reservationId}")]
-        public IActionResult Get(string reservationId)
+        [HttpGet("{reservationKey}")]
+        public IActionResult Get(string reservationKey)
         {
-            if(string.IsNullOrWhiteSpace(reservationId))
+            if(string.IsNullOrWhiteSpace(reservationKey))
             {
                 return new BadRequestObjectResult("Please, provide reservation id.");
             }
 
             try
             {
-                var reservation = _reservationService.GetReservationByKey(reservationId);
+                var reservation = _reservationService.GetReservationByKey(reservationKey);
 
                 var mappedReservation = _mapper.Map<GetReservationResponseModel>(reservation);
                 return new OkObjectResult(mappedReservation);
             }
             catch(KeyNotFoundException exception)
             {
-                _logger.LogError($"Reservation was not found fot key: {reservationId}");
+                _logger.LogError($"Reservation was not found fot key: {reservationKey}");
                 return new NotFoundObjectResult(exception.Message);
             }
-            catch(ArgumentNullException exception)
+            catch(ArgumentException exception)
             {
                 return new BadRequestObjectResult(exception.Message);
             }
@@ -86,12 +85,12 @@ namespace Ryanair.Reservation.Controllers
             catch (KeyNotFoundException exception)
             {
                 _logger.LogError($"Requested flight was not found. Exception message: {exception.Message}");
-                return StatusCode(404, exception.Message);
+                return new NotFoundObjectResult(exception.Message);
             }
             catch (ArgumentException exception)
             {
                 _logger.LogError($"Exception occurred during creation of reservation. Wrong data provided. Exception message: {exception.Message}");
-                return StatusCode(400, exception.Message);
+                return new BadRequestObjectResult(exception.Message);
             }
             catch (PassengerIsNotCreatedException exception)
             {

@@ -2,7 +2,7 @@
 using Ryanair.Reservation.Infrastructure.Business.Util;
 using Xunit;
 
-namespace Ryanair.Reservation.Tests.UnitTests.InfrastructureBusiness.Util
+namespace Ryanair.Reservation.Tests.UnitTests.Infrastructure.Business.Util
 {
     public class KeyGeneratorTests
     {

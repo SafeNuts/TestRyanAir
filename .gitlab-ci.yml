@@ -1,0 +1,29 @@
+image: microsoft/dotnet:latest
+
+stages:
+  - build
+  - test
+
+variables:
+  project: "Ryanair.Reservation"
+
+before_script:
+  - "dotnet restore"
+
+build:
+  stage: build
+  variables:
+    build_path: "src/$project"
+  script:
+    - "pwd"
+    - "cd $build_path"
+    - "dotnet build"
+
+test:
+  stage: test
+  variables:
+    test_path: "test/$project.Tests"
+  script:
+    - "pwd"
+    - "cd $test_path"
+    - "dotnet test"

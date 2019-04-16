@@ -1,0 +1,55 @@
+[
+  {
+    "time": "2017-05-08T06:30:00.000Z",
+    "key": "Flight00001",
+    "origin": "DUBLIN",
+    "destination": "LONDON",
+    "passengers": [
+      {
+        "key" :  "123"
+      }
+    ]
+  },
+  {
+    "time": "2017-05-08T12:00:00.000Z",
+    "key": "Flight00052",
+    "origin": "DUBLIN",
+    "destination": "LONDON"
+  },
+  {
+    "time": "2017-05-10T09:30:00.000Z",
+    "key": "Flight00103",
+    "origin": "LONDON",
+    "destination": "DUBLIN"
+  },
+  {
+    "time": "2017-05-09T11:30:00.000Z",
+    "key": "Flight10001",
+    "origin": "LONDON",
+    "destination": "DUBLIN"
+  },
+  {
+    "time": "2017-05-09T15:00:00.000Z",
+    "key": "Flight10052",
+    "origin": "LONDON",
+    "destination": "DUBLIN"
+  },
+  {
+    "time": "2017-05-11T12:30:00.000Z",
+    "key": "Flight10103",
+    "origin": "LONDON",
+    "destination": "DUBLIN"
+  },
+  {
+    "time": "2017-05-13T10:30:00.000Z",
+    "key": "Flight00021",
+    "origin": "DUBLIN",
+    "destination": "ROME"
+  },
+  {
+    "time": "2017-05-13T18:30:00.000Z",
+    "key": "Flight10021",
+    "origin": "ROME",
+    "destination": "DUBLIN"
+  }
+]

@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8FBF56D-9041-477B-BFBF-194615496108}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		AppendixI.md = AppendixI.md
+		AppendixII.md = AppendixII.md
+		AppendixIII.md = AppendixIII.md
+		InitialState.json = InitialState.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ryanair.Reservation", "src\Ryanair.Reservation\Ryanair.Reservation.csproj", "{6A908727-F22E-42BA-9E5E-74B1EF1F65B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ryanair.Reservation.Tests", "test\Ryanair.Reservation.Tests\Ryanair.Reservation.Tests.csproj", "{9D1BE687-2068-46C0-8B27-2995825AD763}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F01B260D-3228-437D-BE86-0E1D17799CC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ryanair.Reservation.Data", "Ryanair.Reservation.Data\Ryanair.Reservation.Data.csproj", "{27734B15-2B2E-4960-A3E5-ABE7192C04EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastucture", "Infrastucture", "{25DFAEC0-04DC-4185-90EB-6D36930C6E4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ryanair.Reservation.Infrastructure.Data", "Ryanair.Reservation.Infrastructure.Data\Ryanair.Reservation.Infrastructure.Data.csproj", "{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ryanair.Reservation.Infrastructure.Business", "Ryanair.Reservation.Infrastructure.Business\Ryanair.Reservation.Infrastructure.Business.csproj", "{152802EB-F4D7-4F54-B9B2-3205E45D63CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A908727-F22E-42BA-9E5E-74B1EF1F65B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A908727-F22E-42BA-9E5E-74B1EF1F65B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A908727-F22E-42BA-9E5E-74B1EF1F65B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A908727-F22E-42BA-9E5E-74B1EF1F65B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1BE687-2068-46C0-8B27-2995825AD763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1BE687-2068-46C0-8B27-2995825AD763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1BE687-2068-46C0-8B27-2995825AD763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1BE687-2068-46C0-8B27-2995825AD763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27734B15-2B2E-4960-A3E5-ABE7192C04EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27734B15-2B2E-4960-A3E5-ABE7192C04EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27734B15-2B2E-4960-A3E5-ABE7192C04EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27734B15-2B2E-4960-A3E5-ABE7192C04EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{152802EB-F4D7-4F54-B9B2-3205E45D63CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152802EB-F4D7-4F54-B9B2-3205E45D63CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152802EB-F4D7-4F54-B9B2-3205E45D63CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152802EB-F4D7-4F54-B9B2-3205E45D63CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27734B15-2B2E-4960-A3E5-ABE7192C04EF} = {F01B260D-3228-437D-BE86-0E1D17799CC0}
+		{F9D1B259-54CD-4BC5-8B1D-06D6EA1C682A} = {25DFAEC0-04DC-4185-90EB-6D36930C6E4D}
+		{152802EB-F4D7-4F54-B9B2-3205E45D63CD} = {25DFAEC0-04DC-4185-90EB-6D36930C6E4D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DF70393-7E2F-4DE7-9610-CF49327A6F31}
+	EndGlobalSection
+EndGlobal

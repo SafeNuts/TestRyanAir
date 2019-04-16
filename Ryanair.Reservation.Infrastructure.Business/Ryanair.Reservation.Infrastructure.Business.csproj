@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ryanair.Reservation.Data\Ryanair.Reservation.Data.csproj" />
+    <ProjectReference Include="..\Ryanair.Reservation.Infrastructure.Data\Ryanair.Reservation.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>

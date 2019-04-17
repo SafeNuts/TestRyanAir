@@ -26,9 +26,9 @@ Unit tests launch process:
 ## Endpoints list
 
  The API exposes following operations:
-    * GET /Flight: used to search for available flights on a certain date between two different locations.
-    * POST /Reservation: used to create a reservation in the system
-    * GET /Reservation: used to retrieve a reservation previously made.
+ - GET /Flight: used to search for available flights on a certain date between two different locations.
+ - POST /Reservation: used to create a reservation in the system
+ - GET /Reservation: used to retrieve a reservation previously made.
 
 ## Architecture overview
 
